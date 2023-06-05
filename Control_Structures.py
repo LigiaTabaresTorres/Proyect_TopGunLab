@@ -6,6 +6,20 @@ import re
 '''Escriba un programa en Python que imprima los primeros 10 números de Fibonacci usando un bucle'''
 
 def func(n):
+    '''
+    Short description
+    ---------------------
+    Creé una función que imprima números de Fibonacci usando 'For' y 'Range'.
+    ---------------------
+    Parameters
+    ---------------------
+    n = 'int'
+    ---------------------
+    Notes:
+    Esta función se ejecuta solo con valores numéricos.
+    ---------------------
+    '''
+    
     a = 0
     b = 0
     for i in range(1, n):
@@ -42,6 +56,15 @@ should input a number, and the program should print whether it is prime or not.'
 El usuario debe ingresar un número y el programa debe imprimir si es primo o no.'''
 
 def primo():
+    '''
+    Short description
+    ---------------------
+    Creé una función que verificara si un número es primo o no.
+    ---------------------
+    Notes:
+    Esta función se ejecuta solo con valores numéricos.
+    ---------------------
+    '''
 
     num = input('Digite un número: ')
 
