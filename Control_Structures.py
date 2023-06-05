@@ -60,6 +60,7 @@ def primo():
     Short description
     ---------------------
     Creé una función que verifica si un número es primo o no.
+    Utilicé 'For' y 'Range', para realizarla.
     ---------------------
     Notes:
     Esta función se ejecuta solo con valores numéricos.
