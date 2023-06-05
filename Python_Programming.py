@@ -9,8 +9,23 @@ La función debe tener un manejo de errores adecuado y probarse con
 prueba de unidad'''
 
 def is_palindrome(word):
-    'El manejo de errores probado con unittest, está en el archivo Test_PP.py'
+    '''
+    Short description
+    ---------------------
+    Un Palindromo, es una palabra o frase que se lee igual en un sentido y en el otro.
+    Se lee igual de izquierda a derecha que de derecha a izquierda.
+    ---------------------
+
+    Parameters
+    ---------------------
+    word : 'Str'
+    ---------------------
+
+    Notes:
+    El manejo de errores probado con unittest, está en el archivo Test_PP.py.
     
+    '''
+
     word = word.lower()
     size = len(word)
     word_1 = ''
@@ -38,6 +53,22 @@ Utilice este decorador en una función que ordene una lista de números aleatori
 import time
 
 def temporizador(func):
+    '''
+    Short description
+    ---------------------
+    La decorador llamado 'temporizador', se usó en una función, para medir el tiempo necesario
+    en la ejecución de dicha función, que ordena una lista de números y la imprime de manera ordenada.  
+    ---------------------
+
+    Parameters
+    ---------------------
+    *args
+    **Kwargs
+    --------------------
+    Notes:
+    Deje el parámetro **Kwargs, por si se quiere trabajar un diccionario.
+    
+    '''
     def Tiempo(*args, **kwargs):
         inicio = time.time()
         resultado = func(*args, **kwargs)
@@ -53,5 +84,5 @@ def ordenar(lista):
     print(f"Lista ordenada: {lista}")
 
 # Ejemplo 
-lista_numeros = [5, 2, 8, 1, 9, 3, 10, 15, 6]
+lista_numeros = [5, 2, 8, 1, 9, 3, 10, 15, 6, 11, 16, 22, 18, 30, 35, 19, 7]
 ordenar(lista_numeros)
