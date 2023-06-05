@@ -9,7 +9,7 @@ def func(n):
     '''
     Short description
     ---------------------
-    Creé una función que imprima números de Fibonacci usando 'For' y 'Range'.
+    Creé una función que imprime números de Fibonacci usando 'For' y 'Range'.
     ---------------------
     Parameters
     ---------------------
@@ -59,7 +59,7 @@ def primo():
     '''
     Short description
     ---------------------
-    Creé una función que verificara si un número es primo o no.
+    Creé una función que verifica si un número es primo o no.
     ---------------------
     Notes:
     Esta función se ejecuta solo con valores numéricos.
