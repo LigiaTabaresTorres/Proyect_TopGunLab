@@ -8,6 +8,18 @@ their sum.'''
 '''Escriba un programa en Python que tome dos números como entrada del usuario e imprima su suma.'''
 
 def suma():
+    '''
+    Short description
+    ---------------------
+    Creé un función que tomara del usuario, la entrada de dos números. 
+    Para que dicha función devuelva la suma de ellos.
+    Utilicé las expresiones regulares para determinar si el número que el usuario digitó, es float.
+    Utilicé is.numeric, para determinar si es un valor númerico y se convierta en un 'int'.
+    ---------------------
+    Notes:
+    Esta función se ejecuta solo con valores numéricos.
+    ---------------------
+    '''
     n_1 = input("Digite el primer número: ")
     n_2 = input("Digite el segundo número: ")
     
@@ -38,6 +50,19 @@ El usuario debe ingresar la temperatura en Fahrenheit y el programa debe imprimi
 la temperatura equivalente en Celsius.'''
 
 def temp():
+    '''
+    Short description
+    ---------------------
+    Hice una función para imprimir la temperatura en Celsius, 
+    cuando el usuario ingresa la temperatura en Fahrenheit.
+    Utilicé las expresiones regulares para determinar si el número que el usuario digitó, es float.
+    Utilicé is.numeric, para determinar si es un valor númerico y se convierta en un 'int'.
+    ---------------------
+    Notes:
+    Esta función se ejecuta solo con valores numéricos.
+    ---------------------
+    '''
+  
 
     F = input("Digite en valor numérico, la tempetura en Fahrenheit: ")
 
