@@ -9,6 +9,8 @@ La función debe tener un manejo de errores adecuado y probarse con
 prueba de unidad'''
 
 def is_palindrome(word):
+    'El manejo de errores probado con unittest, está en el archivo Test_PP.py'
+    
     word = word.lower()
     size = len(word)
     word_1 = ''
