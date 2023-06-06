@@ -7,6 +7,25 @@ and checking the account balance.'''
 y verificar el saldo de la cuenta.'''
 
 class BankAccount:
+    '''
+    Short description
+    ---------------------
+    Creé una clase con el atributo Saldo, que tiene sus respectivos métodos, 'depositing' y 'withdrawing'.
+    ---------------------
+    Methods
+    ---------------------
+    depositing(deposito: int) # En esta función se deposita el dinero del usuario y se guarda en self.balance. 
+    withdrawing(retiro, int)  # En esta función se retira el dinero del usuario y se guarda en self.balance. 
+    ---------------------
+    Parameters
+    ---------------------
+    saldo = int
+    ---------------------
+    Notes:
+    Esta clase se ejecuta solo con valores numéricos.
+    ---------------------
+    '''
+
     balance = {}
     def __init__(self, saldo):
         self.saldo = saldo
@@ -45,6 +64,20 @@ word using a dictionary. The program should print the words and their counts.'''
 El programa debe imprimir las palabras y sus cuentas.'''
 
 def contar():
+    '''
+    Short description
+    ---------------------
+    Creé una función para leer un archivo de texto. Utilicé 'with open()' y lo guardé en una variable.
+    Convertí las palabras en minúscula.
+    Y determiné que cuando la palabras tuvieran signos de puntuación al final o 
+    al inicio, me trajeran las palabras sin los signos. Lo hice para que se realizara dos veces en la misma palabra, 
+    porque venian dos signos de puntuación juntos en la misma palabra.
+    ---------------------
+    ---------------------
+    Notes:
+    Esta función se ejecuta solo para archivos de texto.
+    ---------------------
+    '''
 
     with open('./text.txt', 'r') as file:
         ocurrencias = {}
@@ -66,4 +99,5 @@ def contar():
                     ocurrencias[palabra] = 1
             for palabra, cuenta in ocurrencias.items():
                 print(f'{palabra}: {cuenta}')
-contar()
+# contar()
+#comenté la función porque en la terminal no aparece la respuesta del primer ejercicio, cuando ambos se ejecutan.
