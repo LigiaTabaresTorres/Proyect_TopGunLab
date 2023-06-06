@@ -8,12 +8,16 @@ unittest'''
 La función debe tener un manejo de errores adecuado y probarse con
 prueba de unidad'''
 
+class IsNumeric(Exception):
+    pass
+
 def is_palindrome(word):
     '''
     Short description
     ---------------------
     Un Palindromo, es una palabra o frase que se lee igual en un sentido y en el otro.
     Se lee igual de izquierda a derecha que de derecha a izquierda.
+    Unittest está en el archivo Test_PP.py.
     ---------------------
 
     Parameters
@@ -22,23 +26,33 @@ def is_palindrome(word):
     ---------------------
 
     Notes:
-    El manejo de errores probado con unittest, está en el archivo Test_PP.py.
+    El manejo de errores probó que el parámetro solo debía contener cadenas de texto 
+    y no debía tener valores numéricos.
     
     '''
+    try:
+        if type(word) != str:
+            raise TypeError('Ingrese solo cadenas de texto')
+        caracteres = list(word)
+        for i in caracteres:
+            if i.isnumeric():
+                raise IsNumeric('La cadena de texto no debe contener valores numéricos')
+        
+        word = word.lower()
+        size = len(word)
+        word_1 = ''
 
-    word = word.lower()
-    size = len(word)
-    word_1 = ''
+        for i in range(1, size + 1):
+            word_1 += word[i*-1]
 
-    for i in range(1, size + 1):
-        word_1 += word[i*-1]
+        if word == word_1:
+            return f"Es un palindromo=>, {word_1}"
+        else: 
+            return f"No es un palindromo =>, {word}"
+    except Exception as error:
+        print(error)
 
-    if word == word_1:
-        return f"Es un palindromo=>, {word_1}"
-    else: 
-        return f"No es un palindromo =>, {word}"
-
-n = is_palindrome('Ana')
+n = is_palindrome('ana')
 print(n)
 
 
@@ -56,17 +70,19 @@ def temporizador(func):
     '''
     Short description
     ---------------------
-    La decorador llamado 'temporizador', se usó en una función, para medir el tiempo necesario
-    en la ejecución de dicha función, que ordena una lista de números y la imprime de manera ordenada.  
+    El decorador llamado 'temporizador', tomó los parámetros de la función ordenar(), 
+    para transferirselos a la función Tiempo(),
+    con el fin de hallar el tiempo necesario para la ejecución de la función ordenar().
+    La función Tiempo() imprime el tiempo de ejecución de la función ordenar().
+    Y la función ordenar(), ordena una lista de números.
     ---------------------
-
     Parameters
     ---------------------
     *args
     **Kwargs
     --------------------
     Notes:
-    Deje el parámetro **Kwargs, por si se quiere trabajar un diccionario.
+    Dejé el parámetro **Kwargs, por si se quiere trabajar un diccionario.
     
     '''
     def Tiempo(*args, **kwargs):
@@ -76,6 +92,7 @@ def temporizador(func):
         tiempo_total = fin - inicio
         print(f"Tiempo de ejecución: {func.__name__}: {tiempo_total} segundos")
         return resultado
+    
     return Tiempo
 
 @temporizador
